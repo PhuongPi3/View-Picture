@@ -24,6 +24,8 @@
         </activity>
         <activity
             android:name=".ViewCourses"/>
+        <activity
+            android:name=".UpdateCourseActivity"/>
 
     </application>
 

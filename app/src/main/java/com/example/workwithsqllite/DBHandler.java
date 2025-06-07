@@ -20,7 +20,7 @@ public class DBHandler extends SQLiteOpenHelper {
     //id cot
     static final String id_cot = "id";
     //ten cot
-    static final  String ten_cot = "ten";
+    static final  String ten = "ten";
     //link
     static final  String link = "link";
 
@@ -33,7 +33,7 @@ public class DBHandler extends SQLiteOpenHelper {
     public  void  onCreate(SQLiteDatabase db){
         String query = "CREATE TABLE " + ten_table + " (" +
                 id_cot + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                ten_cot + " TEXT, " +
+                ten + " TEXT, " +
                 link + " TEXT)";
 
         db.execSQL(query);
@@ -44,14 +44,14 @@ public class DBHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         //them thong tin
-        values.put(ten_cot, coursten);
+        values.put(ten, coursten);
         values.put(link, courelink);
 
         db.insert(ten_table, null, values);
         db.close();
     }
     @Override
-    public  void onUpgrade(SQLiteDatabase db, int oldVerson, int newVersion){
+    public  void onUpgrade(SQLiteDatabase db, int oldVerison, int newVersion){
         //kiem tra neu bang da ton tai hay chua
         db.execSQL("DROP TABLE If EXISTS " +ten_table);
         onCreate(db);
@@ -72,11 +72,25 @@ public class DBHandler extends SQLiteOpenHelper {
             do {
                 //them data
                 courseModalArrayList.add(new CourseModal(
+
                         cursorCourse.getString(1),
                         cursorCourse.getString(2)));
             }while (cursorCourse.moveToNext());
         }
         cursorCourse.close();
         return courseModalArrayList;
+    }
+
+    //ham con update data
+    public  void updateCourse(String originaltencourse, String cten, String clink){
+        //khai bao
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues va = new ContentValues();
+        va.put(ten, cten);
+        va.put(link,clink);
+        //ghi de thong tin
+        db.update(ten_table, va, "ten =?", new String[]{originaltencourse});
+        //dong bang
+        db.close();
     }
 }

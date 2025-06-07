@@ -1,6 +1,7 @@
 package com.example.workwithsqllite;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +41,18 @@ public class CourseRVAdapter extends RecyclerView.Adapter<CourseRVAdapter.ViewHo
         Glide.with(con)
                         .load(mo.getCourselink())
                         .into(holder.courselinktv);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //tao intent
+                Intent i = new Intent(con, UpdateCourseActivity.class);
+
+                //day thong tin len
+                i.putExtra("ten", mo.getCourseten() );
+                i.putExtra("link",mo.getCourselink());
+                con.startActivity(i);
+            }
+        });
     }
     //ham con
     @Override
@@ -58,4 +71,5 @@ public class CourseRVAdapter extends RecyclerView.Adapter<CourseRVAdapter.ViewHo
             courselinktv = itemView.findViewById(R.id.etlink);
         }
     }
+
 }

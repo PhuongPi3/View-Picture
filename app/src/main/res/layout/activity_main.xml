@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:inputType="text"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="90dp" />
+
+    <EditText
+        android:id="@+id/etten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:autofillHints=""
+        android:height="40dp"
+        android:hint="@string/nhap_ten"
+        android:inputType="text"
+        android:minHeight="48dp"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <!--edit text to enter course duration-->
+    <EditText
+        android:id="@+id/etlink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:height="40dp"
+        android:autofillHints=""
+        android:hint="@string/nhap_link_anh"
+        android:inputType="text"
+        android:minHeight="48dp"
+        tools:ignore="VisualLintTextFieldSize" />
+
+
+    <!--button for adding new course-->
+    <Button
+        android:id="@+id/Btnthemanh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="#654EA2"
+        android:text="@string/them_anh"
+        android:textAllCaps="false"
+        tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/btntxemanh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="#4D86A1"
+        android:text="@string/xem_anh1"
+        android:textAllCaps="false"
+        tools:ignore="VisualLintButtonSize" />
+
+</LinearLayout>

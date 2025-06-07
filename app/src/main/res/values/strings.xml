@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">workwithsqllite</string>
+    <string name="them_anh">Them anh</string>
+    <string name="nhap_link_anh">Nhap link anh</string>
+    <string name="nhap_ten">Nhap ten</string>
+    <string name="xem_anh">xem anh</string>
+    <string name="Xem_anh" />
+    <string name="xem_anh1">Xem anh</string>
+</resources>

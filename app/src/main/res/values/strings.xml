@@ -7,4 +7,5 @@
     <string name="Xem_anh" />
     <string name="xem_anh1">Xem anh</string>
     <string name="update_anh">Update anh</string>
+    <string name="xoa_anh">Xoa anh</string>
 </resources>

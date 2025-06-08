@@ -93,4 +93,10 @@ public class DBHandler extends SQLiteOpenHelper {
         //dong bang
         db.close();
     }
+
+    public  void  deleteCourse ( String cten){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(ten_table , "ten=?", new String[]{cten});
+        db.close();
+    }
 }

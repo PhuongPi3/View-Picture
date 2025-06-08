@@ -16,7 +16,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="@string/nhap_ten" />
+        android:hint="@string/nhap_ten"
+        android:minHeight="48dp" />
 
 
     <EditText
@@ -24,7 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="@string/nhap_link_anh" />
+        android:hint="@string/nhap_link_anh"
+        android:minHeight="48dp" />
 
     <!--button for updating our course-->
     <Button
@@ -34,6 +36,15 @@
         android:layout_margin="10dp"
         android:backgroundTint="#37713D"
         android:text="@string/update_anh"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btdelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="#374C71"
+        android:text="@string/xoa_anh"
         android:textAllCaps="false" />
 
 </LinearLayout>
